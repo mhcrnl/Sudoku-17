@@ -1,5 +1,7 @@
-#include "sudoku.h"
+#include "sudokuGrid.h"
+
 #include <iostream>
+#include <math.h>
 
 #define SUDOKU_ROWS 9
 #define SUDOKU_COLS 9
@@ -50,6 +52,7 @@ bool SudokuGrid::isColValid(unsigned colNumber)
     }
     return true;
 }
+
 bool SudokuGrid::isSectionValid(unsigned sectionNumber)
 {
     // we assume that all the cells have a value > 0

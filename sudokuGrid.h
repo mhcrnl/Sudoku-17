@@ -3,7 +3,7 @@
 
 #include "grid.h"
 
-class SudokuGrid  : public Grid {
+class SudokuGrid : public Grid {
     bool isSectionValid(unsigned);
     bool isRowValid(unsigned);
     bool isColValid(unsigned);

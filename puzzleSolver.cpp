@@ -1,9 +1,9 @@
 #include <math.h>
 #include "puzzleSolver.h"
 
-PuzzleSolver& PuzzleSolver::getPuzzleSolver(PUZZLE_TYPE type)
+PuzzleSolver& PuzzleSolver::getPuzzleSolver(PuzzleType type)
 {
-    if(type == PUZZLE_TYPE::sudoku)
+    if(type == PuzzleSolver::Sudoku)
         return *(new SudokuSolver());
 }
 

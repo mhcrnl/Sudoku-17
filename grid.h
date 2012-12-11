@@ -8,7 +8,7 @@ protected:
     int m_cols;
 public:
     Grid(unsigned rows, unsigned cols);
-    Grid::~Grid();
+    ~Grid();
     unsigned rowSize() {return m_rows;};
     unsigned colSize() {return m_cols;};
     virtual void fillCell(unsigned value, unsigned row, unsigned col);

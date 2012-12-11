@@ -3,13 +3,14 @@
 
 #include "grid.h"
 
-enum PUZZLE_TYPE {
-    sudoku = 0
-};
 
 class PuzzleSolver {
 public:
-    static PuzzleSolver& getPuzzleSolver(PUZZLE_TYPE type);
+    typedef enum {
+        Sudoku = 0
+    } PuzzleType;
+
+    static PuzzleSolver& getPuzzleSolver(PuzzleType type);
     virtual bool solve(Grid &grid) = 0;
 };
 
