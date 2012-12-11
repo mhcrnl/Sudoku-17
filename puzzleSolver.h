@@ -1,31 +1,35 @@
 #ifndef PUZZLESOLVER_H
 #define PUZZLESOLVER_H
 
-#include "grid.h"
+#include <string>
+#include <map>
 
+class Grid;
+
+class PuzzleSolver;
+
+typedef PuzzleSolver* (*PuzzleSolverGenerator)();
 
 class PuzzleSolver {
 public:
-    typedef enum {
-        Sudoku = 0
-    } PuzzleType;
+    static PuzzleSolver* getPuzzleSolver(const std::string& type);
 
-    static PuzzleSolver& getPuzzleSolver(PuzzleType type);
+    static bool addToRegistry(const std::string& id, PuzzleSolverGenerator generator);
+
     virtual bool solve(Grid &grid) = 0;
+
+private:
+    static std::map<std::string, PuzzleSolverGenerator> m_registry;
 };
 
-class SudokuSolver: public PuzzleSolver {
-    bool solveSection(Grid &grid, unsigned sectionNumber, unsigned initValue);
-public:
-    bool solve(Grid &grid);
-};
+template<typename T>
+PuzzleSolver* puzzleSolver()
+{
+    return new T();
+}
 
-
-class DefaultPuzzleSolver : public PuzzleSolver {
-    bool solveSection(Grid&, unsigned, unsigned) { return false; }
-public:
-    bool solve(Grid&) { return false; }
-};
+#define REGISTER_PUZZLE_SOLVER(className, type) \
+    bool _id##className = PuzzleSolver::addToRegistry(type, puzzleSolver<className>)
 
 #endif // PUZZLESOLVER_H
 
