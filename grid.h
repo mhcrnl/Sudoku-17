@@ -4,8 +4,8 @@
 class Grid{
 protected:
     int** m_grid;
-    int m_rows;
-    int m_cols;
+    unsigned m_rows;
+    unsigned m_cols;
 public:
     Grid(unsigned rows, unsigned cols);
     ~Grid();

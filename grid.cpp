@@ -1,4 +1,5 @@
 #include "grid.h"
+
 #include <iostream>
 
 using namespace std;
@@ -8,13 +9,13 @@ Grid::Grid(unsigned rows, unsigned cols)
     m_rows = rows;
     m_cols = cols;
     m_grid = new int* [rows];
-    for(int i = 0; i < rows; i++)
+    for(unsigned i = 0; i < rows; i++)
         m_grid[i] = new int [cols];
 }
 
 Grid::~Grid()
 {
-    for(int i = 0; i < m_rows; i++)
+    for(unsigned i = 0; i < m_rows; i++)
         delete [] m_grid[i];
     delete [] m_grid;
     m_grid = 0;
@@ -40,8 +41,8 @@ unsigned Grid::getValueAt(unsigned row, unsigned col)
 
 void Grid::display()
 {
-    for(int i = 0; i < m_rows; i++) {
-        for (int j = 0; j< m_cols; j++)
+    for(unsigned i = 0; i < m_rows; i++) {
+        for (unsigned j = 0; j< m_cols; j++)
             cout << m_grid[i][j] << " ";
         cout << endl;
     }

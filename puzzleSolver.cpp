@@ -1,10 +1,15 @@
 #include <math.h>
+
 #include "puzzleSolver.h"
 
 PuzzleSolver& PuzzleSolver::getPuzzleSolver(PuzzleType type)
 {
-    if(type == PuzzleSolver::Sudoku)
+    switch(type) {
+    case Sudoku:
         return *(new SudokuSolver());
+    default:
+        return *(new DefaultPuzzleSolver());
+    }
 }
 
 bool SudokuSolver::solve(Grid &grid)
@@ -33,3 +38,4 @@ bool SudokuSolver::solveSection(Grid &grid, unsigned sectionNumber /*Starts from
     }
     return true;
 }
+

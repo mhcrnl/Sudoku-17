@@ -20,5 +20,12 @@ public:
     bool solve(Grid &grid);
 };
 
+
+class DefaultPuzzleSolver : public PuzzleSolver {
+    bool solveSection(Grid&, unsigned, unsigned) { return false; }
+public:
+    bool solve(Grid&) { return false; }
+};
+
 #endif // PUZZLESOLVER_H
 
