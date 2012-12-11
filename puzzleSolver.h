@@ -1,18 +1,23 @@
+#ifndef PUZZLESOLVER_H
+#define PUZZLESOLVER_H
+
 #include "grid.h"
 
 enum PUZZLE_TYPE {
-  sudoku = 0
+    sudoku = 0
 };
 
 class PuzzleSolver {
 public:
-	static PuzzleSolver& getPuzzleSolver(PUZZLE_TYPE type);
-	virtual bool solve(Grid &grid) = 0;
-	
+    static PuzzleSolver& getPuzzleSolver(PUZZLE_TYPE type);
+    virtual bool solve(Grid &grid) = 0;
 };
 
 class SudokuSolver: public PuzzleSolver {
-	bool solveSection(Grid &grid, unsigned sectionNumber, unsigned initValue);
+    bool solveSection(Grid &grid, unsigned sectionNumber, unsigned initValue);
 public:
-	bool solve(Grid &grid);
+    bool solve(Grid &grid);
 };
+
+#endif // PUZZLESOLVER_H
+
