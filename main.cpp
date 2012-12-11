@@ -1,5 +1,5 @@
-#include "puzzleSolver.h"
-#include "sudokuGrid.h"
+#include "PuzzleSolver.h"
+#include "SudokuGrid.h"
 
 int main()
 {

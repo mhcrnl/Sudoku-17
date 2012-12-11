@@ -1,7 +1,7 @@
 #ifndef SUDOKUGRID_H
 #define SUDOKUGRID_H
 
-#include "grid.h"
+#include "Grid.h"
 
 class SudokuGrid : public Grid {
     bool isSectionValid(unsigned);

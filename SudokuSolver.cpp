@@ -1,4 +1,4 @@
-#include "grid.h"
+#include "Grid.h"
 #include "SudokuSolver.h"
 
 #include <math.h>
