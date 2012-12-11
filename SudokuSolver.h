@@ -1,7 +1,7 @@
 #ifndef SUDOKUSOLVER_H
 #define SUDOKUSOLVER_H
 
-#include "puzzleSolver.h"
+#include "PuzzleSolver.h"
 
 class SudokuSolver : public PuzzleSolver {
     bool solveSection(Grid &grid, unsigned sectionNumber, unsigned initValue);

@@ -3,20 +3,20 @@ CPP_FLAGS=-c -Wall
 
 all: sudoku
 
-sudoku: main.o grid.o puzzleSolver.o sudokuGrid.o SudokuSolver.o
-	$(CPP) main.o grid.o puzzleSolver.o sudokuGrid.o SudokuSolver.o -o sudoku
+sudoku: main.o Grid.o PuzzleSolver.o SudokuGrid.o SudokuSolver.o
+	$(CPP) main.o Grid.o PuzzleSolver.o SudokuGrid.o SudokuSolver.o -o sudoku
 
 main.o: main.cpp
 	$(CPP) $(CPP_FLAGS) main.cpp
 
-grid.o: grid.cpp
-	$(CPP) $(CPP_FLAGS) grid.cpp
+Grid.o: Grid.cpp
+	$(CPP) $(CPP_FLAGS) Grid.cpp
 
-puzzleSolver.o: puzzleSolver.cpp
-	$(CPP) $(CPP_FLAGS) puzzleSolver.cpp
+PuzzleSolver.o: PuzzleSolver.cpp
+	$(CPP) $(CPP_FLAGS) PuzzleSolver.cpp
 
-sudokuGrid.o: sudokuGrid.cpp
-	$(CPP) $(CPP_FLAGS) sudokuGrid.cpp
+SudokuGrid.o: SudokuGrid.cpp
+	$(CPP) $(CPP_FLAGS) SudokuGrid.cpp
 
 SudokuSolver.o: SudokuSolver.cpp
 	$(CPP) $(CPP_FLAGS) SudokuSolver.cpp

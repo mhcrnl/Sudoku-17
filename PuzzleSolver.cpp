@@ -1,4 +1,4 @@
-#include "puzzleSolver.h"
+#include "PuzzleSolver.h"
 
 #include <math.h>
 
