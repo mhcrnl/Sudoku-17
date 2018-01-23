@@ -1,0 +1,35 @@
+# depslib dependency file v1.0
+1516698623 source:/home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/Grid.cpp
+	"Grid.h"
+	<iostream>
+
+1516698623 /home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/Grid.h
+
+1516698946 source:/home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/main.cpp
+	"PuzzleSolver.h"
+	"SudokuGrid.h"
+
+1516698623 /home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/PuzzleSolver.h
+	<string>
+	<map>
+
+1516698623 /home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/SudokuGrid.h
+	"Grid.h"
+
+1516698623 source:/home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/PuzzleSolver.cpp
+	"PuzzleSolver.h"
+	<math.h>
+
+1516698623 source:/home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/SudokuGrid.cpp
+	"SudokuGrid.h"
+	<iostream>
+	<math.h>
+
+1516698623 source:/home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/SudokuSolver.cpp
+	"Grid.h"
+	"SudokuSolver.h"
+	<math.h>
+
+1516698623 /home/mhcrnl/2018Q1/C++/Sudoku-17/MhcrnlSudoku/SudokuSolver.h
+	"PuzzleSolver.h"
+
